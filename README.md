@@ -11,7 +11,6 @@ Observer Pattern resource from Refactoring Guru: https://refactoring.guru/design
 Your challenge will encompass the following scenarios, tested through your store's implementation:
 
 ### SCENARIO 1: Initial State Verification
-```
 GIVEN no interactions have been performed yet
 WHEN the “getState” method is run
 AND the result is logged to the console
