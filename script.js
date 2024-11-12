@@ -2,10 +2,10 @@ import { createStore } from './store.js';
 import { tallyReducer } from './reducers.js';
 import { add, subtract, reset } from './actions.js';
 
-// Creating store with the tallyReducer
+// Creating const store with the tallyReducer
 const store = createStore(tallyReducer);
 
-// Subscribing to state changes and logging the state
+// this const Subscribing to state changes and logging the state
 store.subscribe(() => {
   console.log('Current state:', store.getState());
 });
