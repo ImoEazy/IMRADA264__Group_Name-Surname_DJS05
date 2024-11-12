@@ -1,0 +1,35 @@
+This project attempts to use redux approach
+
+State Management; where the state is managed in central store.js file, then the actions are dispatched to update the actual state.
+
+ACTIONS; ADD, SUBTRACT, and RESET are the main action types used that allow modifications of the state.
+
+REDUCER; This reducer function used will listen out for the dispatched actions and it then can return the updated state version
+
+SUBSCRIPTN; the subscriber func will listen for changes in staet and then logs the updated state to teh console when changes occur
+
+FILES added;
+actions.js: this file defines the action types (ADD, SUBTRACT, RESET) and creates actions.
+reducers.js: this file contains the tallyReducer function which handles the state updates regarding the dispatched actions.
+store.js: this file enforces the store logic using the methods dispatch, getState, subscribe- to allow interaction with the state.
+script.js: this file handles logic for dispatching actions and observes the changes in state. This simulates real-world scenarios such as subtracting, adding, resetting the counter.
+
+FILE description;
+Store: A store holds the whole state tree of your application. There can only be a single store in a Redux application.
+Actions: Actions are payloads of information that send data from your application to your store. They are the only source of information for the store.
+Reducers: Reducers specify how the application's state changes in response to actions sent to the store.
+
+CHALLENGES;
+handling state change using minimilistic approach. this means kkeeping it simple focusing on getstae, dispatch and subscribe
+
+Modularizing the code;
+Understanding and breaking down the logic into separate files js files was slightly confusing in terms of export and import of files 
+This lead to focusing on ES module standards making sure paths would be correct. In the end able to organize project files appropriately
+
+Correctly handling state update and action dispatch;
+made certain that the state was updated correct by dispatching action in a sequence. It allowed me to observe  chages throug sub func
+
+Component definitions;
+Dispatching an Action: An action is dispatched when you want to change the state. This action describes what happened, but doesn't describe how the application's state changes.
+Handling Actions with Reducers: A reducer is a function that determines how the state should change in response to an action. Reducers are pure functions, meaning they should not have any side-effects or mutate the state directly; instead, they return a new state object based on the incoming action.
+Subscribing to the Store: Components can subscribe to the store, so they can be updated when the state changes. When the state is updated, the store notifies all subscribed components, prompting them to re-render with the new state.
